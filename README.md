@@ -2,8 +2,6 @@
 
 A bare-metal implementation of the classic **Snake** game in C for the **FITkit 3** development board (NXP Kinetis **MK60D10**, ARM Cortex-M4). The game runs on two 8x8 LED matrices (a 16x8 display) and is controlled with the on-board buttons.
 
-> **Demo:** _add a GIF or a link to a video here_
-
 ## Features
 
 - Snake rendered on a 16x8 LED matrix using time-multiplexed column/row selection
@@ -69,16 +67,6 @@ Device and CMSIS headers (`MK60D10.h`, `system_MK60D10.h`, `core_cm4.h`, ...) ar
 |--------|--------|
 | Up / Down / Left / Right | Change the snake's direction |
 | Reset | Restart the game |
-
-## Limitations and possible improvements
-
-This is a simplified version of the original game:
-
-- Fixed snake length (4 segments), no food and no growth
-- No collision detection or score
-- Delays are implemented as busy-wait loops; a hardware timer (PIT) would give precise and CPU-friendly timing and a constant frame rate
-- No software debouncing of the buttons
-- The reverse-direction check compares against the current head direction only, so two quick presses within one step can still produce a reversal
 
 ## Author
 
